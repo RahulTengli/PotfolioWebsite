@@ -1,0 +1,596 @@
+*{
+    padding: 0;
+    margin:0;
+    /* box-sizing: border-box; */
+    font-family: "Be vietnam Pro",sans-serif;
+    scroll-behavior: smooth;
+}    
+#wrapper{
+    height: 100vh;
+    overflow-x:hidden ;
+    overflow-y: auto;
+}
+.container{
+    width:1200px;
+    margin:0 auto;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+}
+.logo{
+    width: 60px;
+}
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+.logo-text{
+    margin-left:-0.5rem ;
+    font-size: 28px;
+}
+.nav-items{
+    display: flex;
+    gap:2rem;
+    padding:0.4em;
+
+}
+.nav-items{
+    font-size: 20px;
+    font-weight:500px;  
+    cursor: pointer; 
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: black;
+}
+.nav-items a:hover{
+    font-weight:bold;
+    transition: 0.8s;
+
+}
+
+.hero-sec{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap:5rem;
+    margin:4rem auto;
+    padding: 0 1rem;
+    padding-bottom:8rem ;
+}
+.hero-sec-faded-text{
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color:rgb(231,231,231);
+
+    bottom:-22%;
+    left:5%;
+    font-weight: bold;
+    transition: all 3s;
+    
+}
+.hero-sec-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+.hero-sec-heading{
+    font-size: 35px;
+    color:#343d68;
+    font-weight: 500;
+
+}
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+.hero-sec-sub-heading{
+    font-size: 45px;
+    line-height: 45px;
+}
+.hero-sec-description{
+    margin-top:1rem;
+    width:70%;
+    font-weight:500;
+}
+
+.button{
+    display:inline;
+    color: white;
+    background-color: red;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position:relative;
+    z-index: 1;
+    width: 4rem;
+    border: 1px solid rgb(183, 177, 177);
+}
+.button:hover{
+    
+    color: black;
+    transition: 1s;
+}
+.button::before{
+    content: "";
+    position:absolute;
+    background-color: white;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform:scalex(0);
+    transition: all 0.8s;
+    z-index: -1;
+    transform-origin:left;
+}
+.button:hover::before{
+    /* z-index: 20; */
+    transform: scalex(1);
+}
+/* .button div{
+    z-index: 20;
+} */
+
+
+.hero-sec-right{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+.user-image{
+    padding:2.5rem;
+    filter:greyscale(1);
+    transition:all 1s;
+    animation: scaleImage 5s linear infinite;
+
+}
+.user-image image{
+    z-index: -9;
+}
+
+@keyframes scaleImage {
+    0%{
+        transform:scale(1);
+        filter:grayscale(0);
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+    }
+    100%{
+        box-shadow:3px 3px 10px black;
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+}
+.icon-dots{
+    z-index: 9;
+    bottom:-1rem;
+    right:0;
+    animation-name: dotAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes dotAnimation {
+    0%{
+        transform: translatey(0px);
+    }    
+    50%{
+        transform: translatey(-15px);
+    }    
+    100%{
+        transform: translatey(0px);
+    }    
+}
+.icon-cube{
+    z-index: 9;
+    top:-0.8em;
+    right:1em;
+    animation-name: cubeRotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes cubeRotate {
+    0%{
+        transform: rotatey(0deg) translatey(0px);
+    }    
+    50%{
+        transform:rotatey(180deg) translatey(-15px);
+    }    
+    100%{
+        transform:rotatey(180deg) translatey(0px);
+    }    
+}
+.icon-circle{
+    z-index: 9;
+    bottom:0.5em;
+    left:1em;
+    animation-name: shakeEffect;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes shakeEffect {
+    50%{
+        bottom:10%;
+        left:5%;
+    }    
+      
+}
+.icon-plus{
+    z-index: 9;
+    top:0.5em;
+    left:12em;
+    animation-name: plusshakeEffect;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes plusshakeEffect {
+    50%{
+        top:3%;
+        left:48%;
+    } 
+} 
+.icon-zigzags{
+    z-index: 9;
+    top:0.5em;
+    left:0.1em;
+    animation-name: shakeEffect;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.project-sec{
+    background-color: rgb(231,231,231);
+    margin-top:4rem;
+
+}
+.project-sec-heading{
+    color:red;
+    font-size:90px ;
+    text-align: center;
+    padding-top:30px ;
+}
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:3rem 0;
+    display:flex;
+    flex-direction: column;
+    gap:120px;
+    
+}
+.project-card{
+    width:90%;
+    height:550px;
+    background-image: url(./images/projects/passwordGenerator.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    z-index: 0;
+}
+.project-card::after{
+    content:"";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: #1f1f1f9a;
+    
+}
+.project-card::before{
+    content:"";
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:linear-gradient(45deg, #343d68,#343d68be,#343d687c);
+    transform: scalex(0);
+    transform-origin:left ;
+    transition: all 0.4s;
+    z-index: 1;
+}
+.project-card:hover::before{
+    transform: scalex(1);
+}
+.project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+    display: none;
+}
+.project-card:hover .project-number{
+    display: block;
+}
+
+.project-number-right{
+   right:-40px;
+   top:-45px;
+}
+.project-number-left{
+    left:-40px;
+    top:-45px;
+}
+.project-content{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    color:white;
+    padding:2rem;
+    bottom:20%;
+    z-index: 5;
+    gap:1rem;
+    transition: all 0.4s;
+
+}
+.project-content-left{
+    left:10%;
+}
+.project-content-right{
+    right:10%;
+}
+
+.project-skills-container{
+    width:60%;
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+#project-skills{
+    width:40px;
+    
+}
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+.project-subHeading{
+    width:70%;
+    font-size: 16px;
+    font-style: italic;
+}
+.button-grp{
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.project-button{
+    width:5rem;
+}
+.icon{
+    padding-left: 1rem;
+    cursor: pointer;
+    color:white;
+    font-size: 35px;
+}
+.icon:hover{
+    color: red;
+    transition:1s;
+}
+#project1{
+    
+    left:-50px;
+}
+#project2{
+    background-image: url(./images/projects/Tic-Tac-Toe.png);
+    right:-50px;
+}
+#project3{
+    background-image: url(./images/projects/codeEditor.png);
+    left:-50px;
+}
+#project4{
+    background-image: url(./images/projects/RazorPay.webp);
+    right:-50px;
+}
+.project-card:hover .project-content{
+    transform: scale(1.1);
+}
+
+.skill-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem;
+    gap:30px;
+}
+.skill-container-left{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+}
+
+.skill-container-right{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    position:relative;
+    gap:1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-faided-text{
+    position: absolute;
+    font-size:15em;
+    font-style: bold;
+    color:rgb(231,231,231);
+    bottom:-32%;
+    right:-12%;
+    user-select: none;
+}
+
+.skills-logo{
+    width:70px;
+    height: 70px;
+
+}
+.skills-logo:hover{
+    transform: scale(120%);
+    transition: 0.3s;
+}
+.blob{
+    position: absolute;
+    top:50%;
+    left: 50%; 
+    animation: blob-logo 3s linear 0s infinite alternate ;
+    z-index: -1;
+    transform: translatex(-150px) translateY(-150px);
+    transition: s;
+}
+@keyframes blob-logo {
+    50%{
+        top: 45%;
+        left:55%;
+    }
+    
+}
+.skill-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: red;
+    line-height: 50px;
+}
+#capitalm{
+    font-size:80px;
+    
+}
+.skill-subHeading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+
+}
+
+.contact-us-form{
+    width: 100%;
+    background-color: rgb(231,231,231);
+    /* width:1200px; */
+}
+.form-container{
+    width:1200px;
+
+}
+.contact-us-heading{
+    font-size: 5rem;
+    color: red;
+    padding-top: 2rem;
+}
+.contact-us-subheading{
+    font-size: 3rem;
+    color: #343d68aa;
+
+}
+.contact-us-form-container{
+    margin-top:25px ;
+    display: flex;
+    align-items: center;
+    justify-content: \;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    width: 70%;
+    margin: 2rem 5rem;
+
+}
+.formfield-container{
+    width: 100%;
+
+}
+.formfield{
+    width:100%;
+    height:42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f ;
+    font-weight: 500;
+    border: none;
+    margin: 17px;
+}
+.formfield-textarea{
+    padding-top:1rem ;
+    height: auto;
+    border:none;
+}
+#submit-button{
+    border: none;
+    font-size: 1.4rem;
+    margin:1rem 0;
+    width:260px;
+}
+#submit-button:hover{
+    scale:0.9;
+}
+.submit-icon{
+    padding:0.1rem;
+}
+
+
+footer{
+    position: relative;
+    background-color:#343d68;
+    margin:0rem;
+    padding:5rem;
+
+}
+.footer-wrapper{
+    padding: 1.2rem;
+    gap:1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: rgb(231,231,231);
+    padding-right: 1.2rem; 
+    font-size: 1rem;  
+    font-weight: bold;
+    text-decoration: none;
+}
+.footer-links a:hover{
+    color:red;
+    transition: all 0.5s;
+}
+
+.footer-john-text{
+    position: absolute;
+    
+    font-size: 5rem;
+    left:0;
+    user-select: none;
+    bottom:0;
+    color:#535c87
+    
+
+}
+.footer-logo{
+    display: flex;
+    gap:1rem;
+    color: rgb(231,231,231);
+    height: 40px;
+
+}
+.footer-logo i{
+    font-size: 2rem;
+}
